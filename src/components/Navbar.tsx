@@ -7,10 +7,10 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center py-4 px-4">
         <div>
-          <img className="w-[90px]" src={logo} alt="" />
+          <img className="w-[110px]" src={logo} alt="" />
         </div>
         <div className="border rounded-lg px-2 flex items-center py-2">
-            <input type="search" name="search" id="search" placeholder="search"/>
+            <input type="search" name="search" id="search" placeholder="search" className="w-[400px]"/>
             <CiSearch />
         </div>
         <div>
