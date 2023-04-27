@@ -26,10 +26,21 @@ const Post = () => {
             placeholder="What's on your mind?"
             rows={1}
             cols={1}
+            value={post}
+            onChange={(e) => setPost(e.target.value)}
           ></textarea>
-          <button className="bg-[#A060FF] text-white font-bold py-1 px-8 rounded-md">
-            POST
-          </button>
+          {post.length == 0 ? (
+            <button
+              className="bg-[#7042b6] text-white font-bold py-1 px-8 rounded-md "
+              disabled
+            >
+              POST
+            </button>
+          ) : (
+            <button className="bg-[#A060FF] text-white font-bold py-1 px-8 rounded-md">
+              POST
+            </button>
+          )}
         </div>
 
         <div className="flex flex-col gap-2">
