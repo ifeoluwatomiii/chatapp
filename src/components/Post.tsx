@@ -1,11 +1,24 @@
 import headshot from "../assets/headshot.jpg";
-import { TbPhotoEdit } from "react-icons/tb";
 import { RxImage } from "react-icons/rx";
 import { BsEmojiSmile } from "react-icons/bs";
 import { useState } from "react";
+import data from "@emoji-mart/data";
+import Picker from "@emoji-mart/react";
+import { useRecoilValue } from "recoil";
+import toggleModeState from "../atoms/toggleModeAtom";
 
 const Post = () => {
   const [post, setPost] = useState("");
+  const [showEmoji, setShowEmoji] = useState(false);
+  const darkMode = useRecoilValue(toggleModeState);
+
+  const addEmoji = (e: { unified: string }) => {
+    const sym = e.unified.split("-");
+    const codesArray: unknown[] = [];
+    sym.forEach((el: string) => codesArray.push("0x" + el));
+    const emoji = String.fromCodePoint(...codesArray);
+    setPost(post + emoji);
+  };
 
   return (
     <div className="divide-y rounded-lg py-4 bg-white shadow-md dark:bg-[#15202B] dark:divide-[#38444d]">
@@ -43,9 +56,26 @@ const Post = () => {
           )}
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="relative flex flex-col gap-2">
           <RxImage className="text-2xl cursor-pointer text-black/50 dark:text-white/70" />
-          <BsEmojiSmile className="text-2xl cursor-pointer text-black/50 dark:text-white/70" />
+          <BsEmojiSmile
+            className="text-2xl cursor-pointer text-black/50 dark:text-white/70"
+            onClick={() => {
+              setShowEmoji(!showEmoji);
+            }}
+          />
+          {showEmoji && (
+            <div className="absolute right-0 z-20 top-16">
+              <Picker
+                data={data}
+                onEmojiSelect={addEmoji}
+                theme={`${darkMode ? "light" : "dark"}`}
+                /*   onClickOutside={() => {
+                  setShowEmoji(!showEmoji);
+                }} */
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
