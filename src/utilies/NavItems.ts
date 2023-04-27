@@ -20,39 +20,39 @@ const navitems : Navitem[] = [
     {
       item: "Feed",
       Icon: ImFeed,
-      link: "/account/feed",
+      link: "/dashboard/feed",
     
     },
    
     {
       item: "Friends",
       Icon: FaUserFriends,
-      link: "/account/friends",
+      link: "/dashboard/friends",
     },
     {
       item: "Events",
       Icon: BsCalendar2Event,
-      link: "/account/events",
+      link: "/dashboard/events",
     },
     {
       item: "Watch Videos",
       Icon: RxVideo,
-      link: "/account/watchvideos",
+      link: "/dashboard/videos",
     },
     {
       item: "Photos",
       Icon: SlPicture,
-      link: "/account/photos",
+      link: "/dashboard/photos",
     },
     {
         item: "Files",
         Icon: AiOutlineFileDone,
-        link: "/account/files",
+        link: "/dashboard/files",
       },
       {
         item: "Market Place",
         Icon: GiCampingTent,
-        link: "/account/marketplace",
+        link: "/dashboard/market",
       },
 
   ];

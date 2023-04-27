@@ -1,29 +1,30 @@
-import headshot from "../assets/headshot.jpg";
+import Profile from "../components/Profile";
 import navitems from "../utilies/NavItems";
 import SideMenu from "../components/SideMenu";
-
-
+import Navbar from "../components/Navbar";
+import { Outlet } from "react-router-dom";
 
 const Dashboard = () => {
 	return (
-		<div className="py-8 px-4">
-			<div className="flex gap-3 items-center">
-				<img className="w-[50px] rounded-full h-[50px] " src={headshot} alt="" />
-				<div>
-					<h3>Aisha Johnson</h3>
-					<p className="text-[#1414]">@aisha_johnson</p>
+		<>
+	
+			<div className="flex items-start justify-between  px-4 min-h-[100vh] ">
+				<div className="w-[20%] pt-8">
+					<Profile />
+					<div className="flex flex-col gap-4 mt-4">
+						{navitems.map((navitem) => {
+							return <SideMenu navitem={navitem} />;
+						})}
+					</div>
+				</div>
+				<div className="w-[60%]">
+					<Outlet />
+				</div>
+				<div className="w-[20%]">
+					<h2>Feed Area</h2>
 				</div>
 			</div>
-            <div>
-				{
-					navitems.map((navitem)=>{
-						return(
-							<SideMenu navitem={navitem}/>
-						)
-					})
-				}
-			</div>
-		</div>
+		</>
 	);
 };
 

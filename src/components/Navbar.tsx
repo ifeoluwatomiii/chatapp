@@ -1,23 +1,38 @@
-import {FiUserPlus, FiSearch} from "react-icons/fi"
-import {CiSearch} from "react-icons/ci"
-import logo from "../assets/logo5.png"
-
+import { FiUserPlus, FiSearch } from "react-icons/fi";
+import { CiSearch } from "react-icons/ci";
+import logo from "../assets/logo5.png";
+import darkLogo from "../assets/darklogochat.png";
+import ToggleMode from "./ToggleMode";
+import { useRecoilValue } from "recoil";
+import toggleModeState from "../atoms/toggleModeAtom";
 
 const Navbar = () => {
-  return (
-    <div className="flex justify-between items-center py-4 px-4">
-        <div>
-          <img className="w-[110px]" src={logo} alt="" />
-        </div>
-        <div className="border rounded-lg px-2 flex items-center py-2">
-            <input type="search" name="search" id="search" placeholder="search" className="w-[400px]"/>
-            <CiSearch />
-        </div>
-        <div>
-            <FiUserPlus/>
-        </div>
-    </div>
-  )
-}
+	const isDarkMode = useRecoilValue(toggleModeState);
+	return (
+		<div className="flex justify-between items-center py-4 px-4  border-b dark:border-[#38444d] shadow-sm h-[80px]">
+			<div>
+				<img
+					className="w-[110px]"
+					src={`${isDarkMode ? logo : darkLogo}`}
+					alt=""
+				/>
+			</div>
+			<div className="border rounded-lg px-2 flex items-center py-2  dark:bg-[#273347] dark:border-[#1b3044] w-[30%]">
+				<input
+					type="search"
+					name="search"
+					id="search"
+					placeholder="search"
+					className="w-[400px] !outline-none dark:bg-transparent dark:text-white w-full"
+				/>
+				<CiSearch className="text-2xl dark:text-white w-[10%]" />
+			</div>
+			<div className="flex items-center gap-6">
+				<ToggleMode />
+				<FiUserPlus className="text-[30px] dark:text-white" />
+			</div>
+		</div>
+	);
+};
 
-export default Navbar
+export default Navbar;
