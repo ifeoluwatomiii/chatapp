@@ -5,6 +5,7 @@ import darkLogo from "../assets/darklogochat.png";
 import ToggleMode from "./ToggleMode";
 import { useRecoilValue } from "recoil";
 import toggleModeState from "../atoms/toggleModeAtom";
+import { MdOutlineNotifications } from "react-icons/md";
 
 const Navbar = () => {
 	const isDarkMode = useRecoilValue(toggleModeState);
@@ -27,7 +28,14 @@ const Navbar = () => {
 				/>
 				<CiSearch className="text-2xl dark:text-white w-[10%]" />
 			</div>
-			<div className="flex items-center gap-6">
+
+			<div className="flex items-center gap-6 relative">
+				<div className="dark:text-white ">
+					<MdOutlineNotifications className="text-[30px] " />
+					<p className="bg-[#A060FF] rounded-full bottom-3 left-5 w-4 text-center absolute ">
+						2
+					</p>
+				</div>
 				<ToggleMode />
 				<FiUserPlus className="text-[30px] dark:text-white" />
 			</div>
