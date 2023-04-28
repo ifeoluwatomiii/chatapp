@@ -3,6 +3,7 @@ import navitems from "../utilies/NavItems";
 import SideMenu from "../components/SideMenu";
 import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
+import FriendSideBar from "../components/FriendSideBar";
 
 const Dashboard = () => {
 	return (
@@ -21,7 +22,7 @@ const Dashboard = () => {
 					<Outlet />
 				</div>
 				<div className="w-[20%]">
-					<h2>Feed Area</h2>
+					<FriendSideBar/>
 				</div>
 			</div>
 		</>
