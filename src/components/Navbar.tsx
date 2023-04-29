@@ -10,7 +10,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 const Navbar = () => {
 	const isDarkMode = useRecoilValue(toggleModeState);
 	return (
-		<div className="flex justify-between items-center py-4 px-4  border-b dark:border-[#38444d] shadow-sm h-[80px]">
+		<div className="flex justify-between items-center py-4 px-4  border-b dark:border-[#38444d] shadow-sm h-[80px] sticky top-0 bg-white z-10 dark:bg-[#15202B]">
 			<div>
 				<img
 					className="w-[110px]"
