@@ -1,11 +1,11 @@
-import { FiUserPlus, FiSearch } from "react-icons/fi";
+import { FiUserPlus} from "react-icons/fi";
 import { CiSearch } from "react-icons/ci";
 import logo from "../assets/logo5.png";
 import darkLogo from "../assets/darklogochat.png";
 import ToggleMode from "./ToggleMode";
 import { useRecoilValue } from "recoil";
 import toggleModeState from "../atoms/toggleModeAtom";
-import { MdOutlineNotifications } from "react-icons/md";
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 const Navbar = () => {
 	const isDarkMode = useRecoilValue(toggleModeState);
@@ -31,8 +31,8 @@ const Navbar = () => {
 
 			<div className="flex items-center gap-6 relative">
 				<div className="dark:text-white ">
-					<MdOutlineNotifications className="text-[30px] " />
-					<p className="bg-[#A060FF] rounded-full bottom-3 left-5 w-4 text-center absolute ">
+					<IoMdNotificationsOutline className="text-[30px] " />
+					<p className="bg-[#A060FF] rounded-full bottom-3 left-4 w-4 text-center absolute text-white">
 						2
 					</p>
 				</div>

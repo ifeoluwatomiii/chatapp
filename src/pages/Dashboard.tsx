@@ -1,7 +1,6 @@
 import Profile from "../components/Profile";
 import navitems from "../utilies/NavItems";
 import SideMenu from "../components/SideMenu";
-import Navbar from "../components/Navbar";
 import { Outlet } from "react-router-dom";
 import FriendSideBar from "../components/FriendSideBar";
 

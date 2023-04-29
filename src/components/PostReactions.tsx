@@ -1,4 +1,3 @@
-import React from 'react'
 import {BiComment} from 'react-icons/bi'
 import {BsHeart, BsShare,BsBookmark} from 'react-icons/bs'
 

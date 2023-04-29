@@ -1,4 +1,3 @@
-import React from "react";
 import headshot from "../assets/headshot.jpg";
 import { ImAttachment } from "react-icons/im";
 import { GrEmoji } from "react-icons/gr";

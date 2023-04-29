@@ -8,7 +8,7 @@ const SideMenu = ({ navitem }: SideMenuProps) => {
 	const { item, Icon, link } = navitem;
 
 	return (
-		<NavLink to={navitem.link}>
+		<NavLink to={link}>
 			<div className="flex items-center gap-3 leading-[20px] px-4 py-2 mt-2 dark:text-white text-xl">
 				<Icon />
 				<h5>{item}</h5>

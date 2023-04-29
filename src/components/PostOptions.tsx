@@ -1,4 +1,3 @@
-import React from "react";
 import { RiFlag2Line } from "react-icons/ri";
 import { useRecoilValue } from "recoil";
 import postOptionState from "../atoms/postOptionAtoms";
