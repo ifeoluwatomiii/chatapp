@@ -1,5 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 import FoldersCard from "../components/FoldersCard";
+import RecentFileCards from "../components/RecentFileCards";
 
 const Files = () => {
 	return (
@@ -15,9 +16,13 @@ const Files = () => {
 				<CiSearch className="text-2xl dark:text-white w-[10%]" />
 			</div>
 
-			<div className="mb-8 py-4">
+			<div className="mb-4 py-4">
 				<h3 className="font-bold text-xl">Recent Files</h3>
 			</div>
+			<div>
+				<RecentFileCards/>
+			</div>
+			<h3 className="font-bold text-xl mb-4">Files</h3>
 			<div className="grid grid-cols-3 gap-6">
 				<FoldersCard />
 				<FoldersCard />
