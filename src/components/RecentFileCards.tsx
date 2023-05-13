@@ -9,7 +9,7 @@ const RecentFileCards = () => {
 				<>
 					<img className="w-[15%]" src={doc} alt="" />
 				</>
-				<div>
+				<div className="cursor-pointer">
 					<h4>Linkedin App</h4>
 					<p>10MB</p>
 				</div>
@@ -18,7 +18,7 @@ const RecentFileCards = () => {
 				<>
 					<img className="w-[13%]" src={googlesheet} alt="" />
 				</>
-				<div>
+				<div className="cursor-pointer">
 					<h4>Linkedin App</h4>
 					<p>10MB</p>
 				</div>
@@ -27,7 +27,7 @@ const RecentFileCards = () => {
 				<>
 					<img className="w-[12%]" src={pdf} alt="" />
 				</>
-				<div>
+				<div className="cursor-pointer">
 					<h4>Linkedin App</h4>
 					<p>10MB</p>
 				</div>

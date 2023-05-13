@@ -3,7 +3,7 @@ import { RiShareForwardLine } from "react-icons/ri"
 import { RxBox } from "react-icons/rx"
 
 
-const FoldersCard = () => {
+const FilesCard = () => {
 	return (
 		<div className="p-4 bg-white rounded-2xl dark:bg-[#15202B] hover:scale-90 transition-all duration-200 ease-in">
 			<div className="flex">
@@ -23,4 +23,4 @@ const FoldersCard = () => {
 	);
 };
 
-export default FoldersCard;
+export default FilesCard;
