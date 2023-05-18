@@ -22,9 +22,9 @@ const EventCard = () => {
 						<h4>Radission Blu, Dwarka</h4>
 					</div>
 				</div>
-                <>
+                <div className="border border-white/30 p-2">
                     <h4>May <br /> 25th</h4>
-                </>
+                </div>
 			</div>
             <div className="flex justify-center gap-10 items-center mt-4">
                 <button className="border py-2 px-8 rounded-lg border-green-600 text-green-500 hover:bg-green-300 hover:text-black">Accept</button>
