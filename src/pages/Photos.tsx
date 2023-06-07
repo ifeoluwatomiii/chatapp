@@ -2,7 +2,11 @@
 
 const Photos = () => {
   return (
-    <div>Photos</div>
+    <div>
+      <div>
+        
+      </div>
+    </div>
   )
 }
 
